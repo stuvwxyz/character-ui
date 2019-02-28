@@ -46,7 +46,7 @@ class CharacterList extends Component {
                 <td style={{whiteSpace: 'nowrap'}}>{character.characterAge}</td>
                 <td style={{whiteSpace: 'nowrap'}}>{character.characterGender}</td>
                 <td style={{whiteSpace: 'nowrap'}}>{character.characterRace}</td>
-                <td style={{whiteSpace: 'nowrap'}}>{character.characterDescription}</td>
+                <td style={{whiteSpace: 'wrap'}}>{character.characterDescription}</td>
                 <td style={{whiteSpace: 'nowrap'}}>{character.characterAlive}</td>
 
                 <td>
