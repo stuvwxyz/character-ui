@@ -29,7 +29,7 @@ class CharacterEdit extends Component {
 
     async componentDidMount() {
         if (this.props.match.params.id !== 'new') {
-            const group = await (await fetch(`/character/${this.props.match.params.id}`)).json();
+            const group = await (await fetch(`/api/character/${this.props.match.params.id}`)).json();
             this.setState({item: group});
         }
     }
@@ -47,7 +47,7 @@ class CharacterEdit extends Component {
         event.preventDefault();
         const {item} = this.state;
 
-        await fetch('/character', {
+        await fetch('/api/character', {
             method: (item.id) ? 'PUT' : 'POST',
             headers: {
                 'Accept': 'application/json',

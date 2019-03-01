@@ -14,13 +14,13 @@ class CharacterList extends Component {
     componentDidMount() {
         this.setState({isLoading: true});
 
-        fetch('character')
+        fetch('/api/character')
             .then(response => response.json())
             .then(data => this.setState({character: data, isLoading: false}));
     }
 
     async remove(id) {
-        await fetch(`/character/${id}`, {
+        await fetch(`/api/character/${id}`, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',

@@ -29,7 +29,7 @@ class CharacterDisplay extends Component {
 
     async componentDidMount() {
         if (this.props.match.params.id !== 'new') {
-            const group = await (await fetch(`/character/${this.props.match.params.id}`)).json();
+            const group = await (await fetch(`/api/character/${this.props.match.params.id}`)).json();
             this.setState({item: group});
         }
     }
@@ -49,7 +49,7 @@ class CharacterDisplay extends Component {
         const {item} = this.state;
         let id = item.characterId;
         console.log(id)
-        await fetch(`/character/${id}`, {
+        await fetch(`/api/character/${id}`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
