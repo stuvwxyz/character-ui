@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './images/logo.svg';
+import homeImage from './images/homeImage.png';
 import AppNavbar from './AppNavbar';
 import { Link } from 'react-router-dom';
 import { Button, Container } from 'reactstrap';
@@ -12,7 +12,7 @@ class Home extends Component {
                 <AppNavbar/>
                 <div className="App">
                     <header className="App-header">
-                        <img src={logo} className="App-logo" alt="logo" />
+                        <img src={homeImage} className="App-logo" alt="homeImage" />
                         <p>
                             Begin your adventure
                         </p>

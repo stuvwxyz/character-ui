@@ -7,6 +7,7 @@ import { Collapse,
     NavItem,
     NavLink,
     } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 export default class AppNavbar extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ export default class AppNavbar extends Component {
 
     render() {
         return <Navbar color="dark" dark expand="md">
-            <NavbarBrand></NavbarBrand>
+            <NavbarBrand tag={Link} to="/">Home</NavbarBrand>
             <NavbarToggler onClick={this.toggle}/>
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
