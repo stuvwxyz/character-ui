@@ -6,7 +6,11 @@ import { Collapse,
     NavbarToggler,
     NavItem,
     NavLink,
-    } from 'reactstrap';
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 export default class AppNavbar extends Component {
     constructor(props) {
@@ -24,6 +28,20 @@ export default class AppNavbar extends Component {
     render() {
         return <Navbar color="dark" dark expand="md">
             <NavbarBrand></NavbarBrand>
+            <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                    Menu
+                </DropdownToggle>
+                <DropdownMenu left>
+                    <DropdownItem tag={Link} to="/">
+                        Home
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem tag={Link} to="/character">
+                        Manage Characters
+                    </DropdownItem>
+                </DropdownMenu>
+            </UncontrolledDropdown>
             <NavbarToggler onClick={this.toggle}/>
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
