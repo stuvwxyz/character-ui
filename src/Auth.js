@@ -7,7 +7,7 @@ class Auth {
             domain: process.env.AUTH0_DOMAIN,
             audience: 'https://' + process.env.AUTH0_DOMAIN + '/userinfo',
             clientID: process.env.AUTH0_CLIENT_ID,
-            redirectUri: process.env.AUTH0_CALLBACK_URL,
+            redirectUri: 'https://ics499-character.herokuapp.com/callback',
             responseType: 'id_token',
             scope: 'openid profile'
         });
