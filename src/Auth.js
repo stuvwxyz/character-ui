@@ -7,7 +7,7 @@ class Auth {
             domain: 'gordianknots.auth0.com',
             audience: 'https://gordianknots.auth0.com/userinfo',
             clientID: 'xttiqiRrvR8maE7DT603buK6oQzU4Sgd',
-            redirectUri: 'http://localhost:3000/callback',
+            redirectUri: 'https://ics499-character.herokuapp.com/callback',
             responseType: 'id_token',
             scope: 'openid profile'
         });
