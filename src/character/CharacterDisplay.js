@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
 import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
-import AppNavbar from '../AppNavbar';
+import Navbar from '../Navbar';
+import { Link, withRouter } from 'react-router-dom';
+import auth0Client from '../Auth';
 
 class CharacterDisplay extends Component {
 
@@ -61,11 +62,13 @@ class CharacterDisplay extends Component {
     }
 
     render() {
+        if (!auth0Client.isAuthenticated()) return null;
+
         const {item} = this.state;
         const title = <h2>{'View Character'}</h2>;
 
         return <div>
-            <AppNavbar/>
+            <Navbar/>
             <Container>
                 {title}
                 <Form onSubmit={this.handleSubmit}>

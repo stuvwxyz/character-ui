@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Button, ButtonGroup, Container, Table } from 'reactstrap';
-import AppNavbar from '../AppNavbar';
-import { Link } from 'react-router-dom';
+import Navbar from '../Navbar';
+import { Link, withRouter } from 'react-router-dom';
+import auth0Client from '../Auth';
 
 class CharacterList extends Component {
 
@@ -33,6 +34,8 @@ class CharacterList extends Component {
     }
 
     render() {
+        if (!auth0Client.isAuthenticated()) return null;
+
         const {character, isLoading} = this.state;
 
         if (isLoading) {
@@ -61,7 +64,7 @@ class CharacterList extends Component {
 
         return (
             <div>
-                <AppNavbar/>
+                <Navbar/>
                 <Container fluid>
                     <div className="float-right">
                         <Button color="success" tag={Link} to="/characteredit/new">Add Character</Button>
@@ -89,4 +92,4 @@ class CharacterList extends Component {
     }
 }
 
-export default CharacterList;
+export default withRouter(CharacterList);
