@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
 import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
-import AppNavbar from '../AppNavbar';
+import Navbar from '../Navbar';
+import { Link, withRouter } from 'react-router-dom';
+import auth0Client from '../Auth';
 
 class CharacterEdit extends Component {
 
@@ -59,11 +60,13 @@ class CharacterEdit extends Component {
     }
 
     render() {
+        if (!auth0Client.isAuthenticated()) return null;
+
         const {item} = this.state;
         const title = <h2>{item.id ? 'Edit Character' : 'Add Character'}</h2>;
 
         return <div>
-            <AppNavbar/>
+            <Navbar/>
             <Container>
                 {title}
                 <Form onSubmit={this.handleSubmit}>

@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CharacterList from './character/CharacterList';
 import CharacterDisplay from "./character/CharacterDisplay";
 import CharacterEdit from "./character/CharacterEdit";
-
+import Callback from './Callback';
+import SecuredRoute from './SecuredRoute/SecuredRoute';
 
 class App extends Component {
   render() {
@@ -14,9 +15,12 @@ class App extends Component {
           <Switch>
             <Route path='/' exact={true} component={Home}/>
 
-            <Route path='/character' exact={true} component={CharacterList}/>
-            <Route path='/character/:id' component={CharacterDisplay}/>
-            <Route path='/characteredit/:id' component={CharacterEdit}/>
+            <SecuredRoute path='/character' component={CharacterList} />
+            <SecuredRoute path='/character/:id' component={CharacterDisplay}/>
+            <SecuredRoute path='/characteredit/:id' component={CharacterEdit}/>
+
+            <Route exact path='/callback' component={Callback}/>
+
           </Switch>
         </Router>
     )
