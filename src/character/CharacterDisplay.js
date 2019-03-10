@@ -118,4 +118,4 @@ class CharacterDisplay extends Component {
     }
 }
 
-export default withRouter(CharacterDisplay);
+export default CharacterDisplay;
