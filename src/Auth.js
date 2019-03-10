@@ -4,10 +4,10 @@ class Auth {
     constructor() {
         this.auth0 = new auth0.WebAuth({
             // the following three lines MUST be updated
-            domain: 'gordianknots.auth0.com',
-            audience: 'https://gordianknots.auth0.com/userinfo',
-            clientID: 'xttiqiRrvR8maE7DT603buK6oQzU4Sgd',
-            redirectUri: 'https://ics499-character.herokuapp.com/callback',
+            domain: process.env.AUTH0_DOMAIN,
+            audience: 'https://' + process.env.AUTH0_DOMAIN + 'gordianknots.auth0.com/userinfo',
+            clientID: process.env.AUTH0_CLIENT_ID,
+            redirectUri: process.env.AUTH0_CALLBACK_URL,
             responseType: 'id_token',
             scope: 'openid profile'
         });
@@ -42,22 +42,37 @@ class Auth {
                 if (!authResult || !authResult.idToken) {
                     return reject(err);
                 }
-                this.idToken = authResult.idToken;
-                this.profile = authResult.idTokenPayload;
-                // set the time that the id token will expire at
-                this.expiresAt = authResult.idTokenPayload.exp * 1000;
+                this.setSession(authResult);
                 resolve();
             });
         })
     }
 
+    setSession(authResult) {
+        this.idToken = authResult.idToken;
+        this.profile = authResult.idTokenPayload;
+        // set the time that the id token will expire at
+        this.expiresAt = authResult.idTokenPayload.exp * 1000;
+    }
+
     signOut() {
-        // clear id token, profile, and expiration
-        this.idToken = null;
-        this.profile = null;
-        this.expiresAt = null;
+        this.auth0.logout({
+            returnTo: 'https://ics499-character.herokuapp.com',
+            clientID: '<YOUR_AUTH0_CLIENT_ID>',
+        });
+    }
+
+    silentAuth() {
+        return new Promise((resolve, reject) => {
+            this.auth0.checkSession({}, (err, authResult) => {
+                if (err) return reject(err);
+                this.setSession(authResult);
+                resolve();
+            });
+        });
     }
 }
+
 
 const auth0Client = new Auth();
 
