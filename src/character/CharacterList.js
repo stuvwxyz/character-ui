@@ -92,4 +92,4 @@ class CharacterList extends Component {
     }
 }
 
-export default CharacterList;
+export default withRouter(CharacterList);
