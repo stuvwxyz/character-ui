@@ -126,4 +126,4 @@ class CharacterEdit extends Component {
     }
 }
 
-export default CharacterEdit;
+export default withRouter(CharacterEdit);
