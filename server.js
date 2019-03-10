@@ -8,6 +8,8 @@ const app = express();
 const url = require('url');
 const proxy = require('express-http-proxy');
 
+require('dotenv').config();
+
 // New hostname+path as specified by question:
 const apiProxy = proxy('https://ics499-character-api.herokuapp.com', {
     forwardPath: req => url.parse(req.baseUrl).path
