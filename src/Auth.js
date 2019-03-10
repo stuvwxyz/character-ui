@@ -4,9 +4,9 @@ class Auth {
     constructor() {
         this.auth0 = new auth0.WebAuth({
             // the following three lines MUST be updated
-            domain: process.env.AUTH0_DOMAIN,
-            audience: 'https://' + process.env.AUTH0_DOMAIN + '/userinfo',
-            clientID: process.env.AUTH0_CLIENT_ID,
+            domain: 'gordianknots.auth0.com',
+            audience: 'https://gordianknots.auth0.com/userinfo',
+            clientID: 'xttiqiRrvR8maE7DT603buK6oQzU4Sgd',
             redirectUri: 'https://ics499-character.herokuapp.com/callback',
             responseType: 'id_token',
             scope: 'openid profile'
