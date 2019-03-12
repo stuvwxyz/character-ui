@@ -7,7 +7,7 @@ class Auth {
             domain: 'gordianknots.auth0.com',
             audience: 'https://gordianknots.auth0.com/userinfo',
             clientID: 'xttiqiRrvR8maE7DT603buK6oQzU4Sgd',
-            redirectUri: 'https://ics499-character.herokuapp.com/callback',
+            redirectUri: 'https://gamenite-ledgermen.herokuapp.com/callback',
             responseType: 'id_token',
             scope: 'openid profile'
         });
@@ -57,7 +57,7 @@ class Auth {
 
     signOut() {
         this.auth0.logout({
-            returnTo: 'https://ics499-character.herokuapp.com',
+            returnTo: 'https://gamenite-ledgermen.herokuapp.com',
             clientID: 'xttiqiRrvR8maE7DT603buK6oQzU4Sgd',
         });
     }

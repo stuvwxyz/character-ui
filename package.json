@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://ics499-character-api.herokuapp.com",
+  "proxy": "https://gamenite-ledgermen-api.herokuapp.com",
   "eslintConfig": {
     "extends": "react-app"
   },
