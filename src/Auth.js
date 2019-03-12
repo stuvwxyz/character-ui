@@ -6,7 +6,7 @@ class Auth {
             // the following three lines MUST be updated
             domain: 'gordianknots.auth0.com',
             audience: 'https://gordianknots.auth0.com/userinfo',
-            clientID: 'xttiqiRrvR8maE7DT603buK6oQzU4Sgd',
+            clientID: '0tyhNYO7PRyaEupFX3hNekJQfxD3gCCj',
             redirectUri: 'https://gamenite-ledgermen.herokuapp.com/callback',
             responseType: 'id_token',
             scope: 'openid profile'
