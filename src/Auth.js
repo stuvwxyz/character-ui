@@ -58,7 +58,7 @@ class Auth {
     signOut() {
         this.auth0.logout({
             returnTo: 'https://gamenite-ledgermen.herokuapp.com',
-            clientID: 'xttiqiRrvR8maE7DT603buK6oQzU4Sgd',
+            clientID: '0tyhNYO7PRyaEupFX3hNekJQfxD3gCCj',
         });
     }
 
