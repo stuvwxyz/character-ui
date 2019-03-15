@@ -26,8 +26,8 @@ class App extends Component {
           <Switch>
             <Route path='/' exact={true} component={Home}/>
 
-            <SecuredRoute path='/character' component={CharacterList} />
             <SecuredRoute path='/character/:id' component={CharacterDisplay}/>
+            <SecuredRoute path='/character' component={CharacterList} />
             <SecuredRoute path='/characteredit/:id' component={CharacterEdit}/>
 
             <Route exact path='/callback' component={Callback}/>
