@@ -7,7 +7,7 @@ class Auth {
             domain: 'gordianknots.auth0.com',
             audience: 'https://gordianknots.auth0.com/userinfo',
             clientID: '0tyhNYO7PRyaEupFX3hNekJQfxD3gCCj',
-            redirectUri: 'https://gamenite-ledgermen.herokuapp.com/callback',
+            redirectUri: 'http://gamenite-ledgermen.herokuapp.com/callback',
             responseType: 'id_token',
             scope: 'openid profile'
         });

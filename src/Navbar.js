@@ -34,6 +34,12 @@ function NavBar(props) {
                         <DropdownItem tag={Link} to="/character">
                             Manage Characters
                         </DropdownItem>
+                        <DropdownItem tag={Link} to="/location">
+                            Manage Locations
+                        </DropdownItem>
+                        <DropdownItem tag={Link} to="/organization">
+                            Manage Organizations
+                        </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem divider />
                         <DropdownItem tag="a" href="https://github.com/stuvwxyz/character-ui">
