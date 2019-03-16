@@ -71,47 +71,52 @@ class CharacterEdit extends Component {
                 {title}
                 <Form onSubmit={this.handleSubmit}>
                     <FormGroup>
-                        <Label for="characterName">characterName</Label>
+                        <Label for="characterName">Name</Label>
                         <Input type="text" name="characterName" id="characterName" value={item.characterName || ''}
                                onChange={this.handleChange} autoComplete="characterName"/>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="characterAge">characterAge</Label>
+                        <Label for="characterAge">Age</Label>
                         <Input type="text" name="characterAge" id="characterAge" value={item.characterAge || ''}
                                onChange={this.handleChange} autoComplete="characterAge"/>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="characterGender">characterGender</Label>
+                        <Label for="characterGender">Gender</Label>
                         <Input type="text" name="characterGender" id="characterGender" value={item.characterGender || ''}
                                onChange={this.handleChange} autoComplete="characterGender"/>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="characterRace">characterRace</Label>
+                        <Label for="characterRace">Race</Label>
                         <Input type="text" name="characterRace" id="characterRace" value={item.characterRace || ''}
                                onChange={this.handleChange} autoComplete="characterRace"/>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="characterDescription">characterDescription</Label>
+                        <Label for="characterRelations">Relations (siblings)</Label>
+                        <Input type="text" name="characterRelations" id="characterRelations" value={item.characterRelations || ''}
+                               onChange={this.handleChange} autoComplete="characterRelations"/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="characterDescription">Description</Label>
                         <Input type="text" name="characterDescription" id="characterDescription" value={item.characterDescription || ''}
                                onChange={this.handleChange} autoComplete="characterDescription"/>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="characterPurpose">characterPurpose</Label>
+                        <Label for="characterPurpose">Purpose</Label>
                         <Input type="text" name="characterPurpose" id="characterPurpose" value={item.characterPurpose || ''}
                                onChange={this.handleChange} autoComplete="characterPurpose"/>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="characterBackground">characterBackground</Label>
+                        <Label for="characterBackground">Background</Label>
                         <Input type="text" name="characterBackground" id="characterBackground" value={item.characterBackground || ''}
                                onChange={this.handleChange} autoComplete="characterBackground"/>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="characterNotes">characterNotes</Label>
+                        <Label for="characterNotes">Notes</Label>
                         <Input type="text" name="characterNotes" id="characterNotes" value={item.characterNotes || ''}
                                onChange={this.handleChange} autoComplete="characterNotes"/>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="characterAlive">characterAlive</Label>
+                        <Label for="characterAlive">Alive</Label>
                         <Input type="text" name="characterAlive" id="characterAlive" value={item.characterAlive || ''}
                                onChange={this.handleChange} autoComplete="characterAlive"/>
                     </FormGroup>
