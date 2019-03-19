@@ -9,8 +9,10 @@ class LocationEdit extends Component {
     emptyItem = {
         locationId: '',
         locationName: '',
+        locationSize: '',
         locationLocation: '',
         locationTerrain: '',
+        locationFactions: '',
         locationNotes: ''
     };
 
@@ -71,6 +73,11 @@ class LocationEdit extends Component {
                                onChange={this.handleChange} autoComplete="locationName"/>
                     </FormGroup>
                     <FormGroup>
+                        <Label for="locationSize">How large is it?</Label>
+                        <Input type="text" name="locationSize" id="locationSize" value={item.locationSize || ''}
+                               onChange={this.handleChange} autoComplete="locationSize"/>
+                    </FormGroup>
+                    <FormGroup>
                         <Label for="locationLocation">Whrere is it located?</Label>
                         <Input type="text" name="locationLocation" id="locationLocation" value={item.locationLocation || ''}
                                onChange={this.handleChange} autoComplete="locationLocation"/>
@@ -79,6 +86,11 @@ class LocationEdit extends Component {
                         <Label for="locationTerrain">Terrain</Label>
                         <Input type="text" name="locationTerrain" id="locationTerrain" value={item.locationTerrain || ''}
                                onChange={this.handleChange} autoComplete="locationTerrain"/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="locationFactions">Notable Factions</Label>
+                        <Input type="text" name="locationFactions" id="locationFactions" value={item.locationFactions || ''}
+                               onChange={this.handleChange} autoComplete="locationFactions"/>
                     </FormGroup>
                     <FormGroup>
                         <Label for="locationNotes">Notes</Label>
