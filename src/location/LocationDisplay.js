@@ -9,8 +9,10 @@ class LocationDisplay extends Component {
     emptyItem = {
         locationId: '',
         locationName: '',
+        locationSize: '',
         locationLocation: '',
         locationTerrain: '',
+        locationFactions: '',
         locationNotes: ''
     };
 
@@ -72,6 +74,10 @@ class LocationDisplay extends Component {
                         <Input type="text" name="locationName" id="locationName" value={item.locationName || ''}
                                autoComplete="locationName"/>
 
+                        <Label for="locationSize">How large is it?</Label>
+                        <Input type="text" name="locationSize" id="locationSize" value={item.locationSize || ''}
+                               autoComplete="locationSize"/>
+
                         <Label for="locationLocation">Where is it Located?</Label>
                         <Input type="text" name="locationLocation" id="locationLocation" value={item.locationLocation || ''}
                                autoComplete="locationLocation"/>
@@ -79,6 +85,10 @@ class LocationDisplay extends Component {
                         <Label for="locationTerrain">Terrain</Label>
                         <Input type="text" name="locationTerrain" id="locationTerrain" value={item.locationTerrain || ''}
                                autoComplete="locationTerrain"/>
+
+                        <Label for="locationFactions">Notable Factions?</Label>
+                        <Input type="text" name="locationFactions" id="locationFactions" value={item.locationFactions || ''}
+                               autoComplete="locationFactions"/>
 
                         <Label for="locationNotes">Notes</Label>
                         <Input type="text" name="locationNotes" id="locationNotes" value={item.locationNotes || ''}
