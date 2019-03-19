@@ -46,9 +46,10 @@ class LocationList extends Component {
 
             return <tr key={location.id}>
                 <td style={{whiteSpace: 'nowrap'}}>{location.locationName}</td>
+                <td style={{whiteSpace: 'nowrap'}}>{location.locationSize}</td>
                 <td style={{whiteSpace: 'nowrap'}}>{location.locationLocation}</td>
                 <td style={{whiteSpace: 'nowrap'}}>{location.locationTerrain}</td>
-                <td style={{whiteSpace: 'nowrap'}}>{location.locationNotes}</td>
+                <td style={{whiteSpace: 'wrap'}}>{location.locationFactions}</td>
 
                 <td>
                     <ButtonGroup className="float-right">
@@ -71,10 +72,11 @@ class LocationList extends Component {
                     <Table className="mt-4">
                         <thead>
                         <tr>
-                            <th width="15%">Name</th>
-                            <th width="25%">Where is it located?</th>
-                            <th width="30%">Terrain</th>
-                            <th width="30%">Notes</th>
+                            <th width="20%">Name</th>
+                            <th width="20%">How large is it?</th>
+                            <th width="20%">Where is it located?</th>
+                            <th width="20%">Terrain</th>
+                            <th width="20%">Notable Factions</th>
                         </tr>
                         </thead>
                         <tbody>
