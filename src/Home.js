@@ -18,6 +18,8 @@ class Home extends Component {
                         </p>
                         <Container fluid>
                             <Button color="link"><Link to="/character">Manage Characters</Link></Button>
+                            <Button color="link"><Link to="/location">Manage Locations</Link></Button>
+                            <Button color="link"><Link to="/organization">Manage Organizations</Link></Button>
                         </Container>
                     </header>
                 </div>

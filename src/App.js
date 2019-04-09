@@ -8,6 +8,12 @@ import CharacterEdit from "./character/CharacterEdit";
 import Callback from './Callback';
 import SecuredRoute from './SecuredRoute/SecuredRoute';
 import auth0Client from './Auth';
+import LocationDisplay from "./location/LocationDisplay";
+import LocationList from "./location/LocationList";
+import LocationEdit from "./location/LocationEdit";
+import OrganizationDisplay from "./organization/OrganizationDisplay";
+import OrganizationList from "./organization/OrganizationList";
+import OrganizationEdit from "./organization/OrganizationEdit";
 
 class App extends Component {
     async componentDidMount() {
@@ -29,6 +35,14 @@ class App extends Component {
             <SecuredRoute path='/character/:id' component={CharacterDisplay}/>
             <SecuredRoute path='/character' component={CharacterList} />
             <SecuredRoute path='/characteredit/:id' component={CharacterEdit}/>
+
+              <SecuredRoute path='/location/:id' component={LocationDisplay}/>
+              <SecuredRoute path='/location' component={LocationList} />
+              <SecuredRoute path='/locationedit/:id' component={LocationEdit}/>
+
+              <SecuredRoute path='/organization/:id' component={OrganizationDisplay}/>
+              <SecuredRoute path='/organization' component={OrganizationList} />
+              <SecuredRoute path='/organizationedit/:id' component={OrganizationEdit}/>
 
             <Route exact path='/callback' component={Callback}/>
 
