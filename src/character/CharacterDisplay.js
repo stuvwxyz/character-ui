@@ -73,39 +73,43 @@ class CharacterDisplay extends Component {
                 {title}
                 <Form onSubmit={this.handleSubmit}>
                     <FormGroup>
-                        <Label for="characterName">characterName</Label>
+                        <Label for="characterName">Name</Label>
                         <Input type="text" name="characterName" id="characterName" value={item.characterName || ''}
                                autoComplete="characterName"/>
 
-                        <Label for="characterAge">characterAge</Label>
+                        <Label for="characterAge">Age</Label>
                         <Input type="text" name="characterAge" id="characterAge" value={item.characterAge || ''}
                                autoComplete="characterAge"/>
 
-                        <Label for="characterGender">characterGender</Label>
+                        <Label for="characterGender">Gender</Label>
                         <Input type="text" name="characterGender" id="characterGender" value={item.characterGender || ''}
                                autoComplete="characterGender"/>
 
-                        <Label for="characterRace">characterRace</Label>
+                        <Label for="characterRace">Race</Label>
                         <Input type="text" name="characterRace" id="characterRace" value={item.characterRace || ''}
                                autoComplete="characterRace"/>
 
-                        <Label for="characterDescription">characterDescription</Label>
+                        <Label for="characterRelations">Relations (siblings)</Label>
+                        <Input type="text" name="characterRelations" id="characterRelations" value={item.characterRelations || ''}
+                               autoComplete="characterRelations"/>
+
+                        <Label for="characterDescription">Description</Label>
                         <Input type="text" name="characterDescription" id="characterDescription" value={item.characterDescription || ''}
                                autoComplete="characterDescription"/>
 
-                        <Label for="characterPurpose">characterPurpose</Label>
+                        <Label for="characterPurpose">Purpose</Label>
                         <Input type="text" name="characterPurpose" id="characterPurpose" value={item.characterPurpose || ''}
                                autoComplete="characterPurpose"/>
 
-                        <Label for="characterBackground">characterBackground</Label>
+                        <Label for="characterBackground">Background</Label>
                         <Input type="text" name="characterBackground" id="characterBackground" value={item.characterBackground || ''}
                                autoComplete="characterBackground"/>
 
-                        <Label for="characterNotes">characterNotes</Label>
+                        <Label for="characterNotes">Notes</Label>
                         <Input type="text" name="characterNotes" id="characterNotes" value={item.characterNotes || ''}
                                autoComplete="characterNotes"/>
 
-                        <Label for="characterAlive">characterAlive</Label>
+                        <Label for="characterAlive">Alive</Label>
                         <Input type="text" name="characterAlive" id="characterAlive" value={item.characterAlive || ''}
                                autoComplete="characterAlive "/>
                     </FormGroup>
