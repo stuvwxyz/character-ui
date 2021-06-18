@@ -76,6 +76,7 @@ class OrganizationDisplay extends Component {
                                autoComplete="organizationNotes"/>
 
                         <Label for="organizationPurpose">Purpose</Label>
+
                         <Input type="text" name="organizationPurpose" id="organizationPurpose" value={item.organizationPurpose || ''}
                                autoComplete="organizationPurpose"/>
 
