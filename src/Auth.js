@@ -6,8 +6,8 @@ class Auth {
             // the following three lines MUST be updated
             domain: 'gordianknots.auth0.com',
             audience: 'https://gordianknots.auth0.com/userinfo',
-            clientID: '0tyhNYO7PRyaEupFX3hNekJQfxD3gCCj',
-            redirectUri: 'https://gamenite-ledgermen.herokuapp.com/callback',
+            clientID: 'm01zl0fyCE1DcHpYjN0EzX8F0Ezj684g',
+            redirectUri: 'https://gamenite-dev.herokuapp.com/callback',
             responseType: 'id_token',
             scope: 'openid profile'
         });
@@ -57,8 +57,8 @@ class Auth {
 
     signOut() {
         this.auth0.logout({
-            returnTo: 'https://gamenite-ledgermen.herokuapp.com',
-            clientID: '0tyhNYO7PRyaEupFX3hNekJQfxD3gCCj',
+            returnTo: 'https://gamenite-dev.herokuapp.com',
+            clientID: 'm01zl0fyCE1DcHpYjN0EzX8F0Ezj684g',
         });
     }
 

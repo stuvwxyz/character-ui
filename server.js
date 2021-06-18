@@ -11,7 +11,7 @@ const proxy = require('express-http-proxy');
 require('dotenv').config();
 
 // New hostname+path as specified by question:
-const apiProxy = proxy('https://gamenite-ledgermen-api.herokuapp.com', {
+const apiProxy = proxy('https://gamenite-api-dev.herokuapp.com', {
     forwardPath: req => url.parse(req.baseUrl).path
 });
 

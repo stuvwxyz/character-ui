@@ -16,13 +16,15 @@ class CharacterDisplay extends Component {
         characterPurpose: '',
         characterBackground: '',
         characterNotes: '',
-        characterAlive: ''
+        characterAlive: '',
+        characterLocations: []
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            item: this.emptyItem
+            item: this.emptyItem,
+            //characterLocations: []
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,6 +35,10 @@ class CharacterDisplay extends Component {
             const group = await (await fetch(`/api/character/${this.props.match.params.id}`)).json();
             this.setState({item: group});
         }
+        
+       // await fetch(`/api/character/${this.props.match.params.id}/locations`)
+       //     .then(response => response.json())
+       //     .then(characterLocations => this.setState({ characterLocations }));
     }
 
     handleChange(event) {
@@ -66,7 +72,11 @@ class CharacterDisplay extends Component {
 
         const {item} = this.state;
         const title = <h2>{'View Character'}</h2>;
-
+        
+        function ListItem(item) {
+            return <li>{item.value}</li>;
+        }
+        
         return <div>
             <Navbar/>
             <Container>
@@ -111,7 +121,12 @@ class CharacterDisplay extends Component {
 
                         <Label for="characterAlive">Alive</Label>
                         <Input type="text" name="characterAlive" id="characterAlive" value={item.characterAlive || ''}
-                               autoComplete="characterAlive "/>
+                               autoComplete="characterAlive "/>   
+                         <Label for="characterLocations">Character Locations</Label>
+                                <ul>
+                                   {item.characterLocations.map(location => {
+                                       return <li key={`location-${location.locationId}`}>{location.locationName},{location.locationTerrain}</li>                                    })}
+                               </ul>                                                                  
                     </FormGroup>
                     <FormGroup>
                         <Button color="success" tag={Link} to="/character">Return</Button>

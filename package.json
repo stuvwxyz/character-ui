@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "auth0-js": "^9.10.0",
+    "auth0-js": "^9.13.2",
     "bootstrap": "4.3.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://gamenite-ledgermen-api.herokuapp.com",
+  "proxy": "https://gamenite-api-dev.herokuapp.com",
   "eslintConfig": {
     "extends": "react-app"
   },
