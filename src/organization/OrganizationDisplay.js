@@ -75,7 +75,8 @@ class OrganizationDisplay extends Component {
                         <Input type="text" name="organizationNotes" id="organizationNotes" value={item.organizationNotes || ''}
                                autoComplete="organizationNotes"/>
 
-                        <Label for="organizationPurpose">Gender</Label>
+                        <Label for="organizationPurpose">Purpose</Label>
+
                         <Input type="text" name="organizationPurpose" id="organizationPurpose" value={item.organizationPurpose || ''}
                                autoComplete="organizationPurpose"/>
 
